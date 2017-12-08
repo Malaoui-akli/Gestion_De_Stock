@@ -5,13 +5,15 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.OrderBy;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+
+import org.springframework.stereotype.Component;
 
 import com.stock.mvc.dao.IGeneriqueDao;
 
 @SuppressWarnings("unchecked")
+
 public class GeneriqueDaoImpl<E> implements IGeneriqueDao<E> {
 
 	@PersistenceContext
@@ -28,7 +30,7 @@ public class GeneriqueDaoImpl<E> implements IGeneriqueDao<E> {
 
 	@Override
 	public E save(E entity) {
-		em.persist(entity);		
+		em.persist(entity);
 		return entity;
 	}
 
