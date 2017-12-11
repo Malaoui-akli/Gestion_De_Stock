@@ -15,6 +15,7 @@ import javax.persistence.TemporalType;
 @Entity
 public class MvtStock implements Serializable{
 
+	private static final long serialVersionUID = 1L;
 	private static final int ENTREE = 1;
 	private static final int SORTIE = 2;
 	@Id
