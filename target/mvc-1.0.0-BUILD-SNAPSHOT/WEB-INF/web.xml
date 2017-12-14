@@ -17,13 +17,13 @@
 	</listener>
 
 <!-- Multilingue definition -->
-	<context-param>
+	<!-- <context-param>
 	    <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
 	    <param-value>com.stock.mvc.i18n.applicationresources</param-value>
-	</context-param>
+	</context-param> -->
 
 	<!-- Processes application requests -->
-	<servlet>
+	 <servlet>
 		<servlet-name>appServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
@@ -31,7 +31,7 @@
 			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
-	</servlet>
+	</servlet> 
 		
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>

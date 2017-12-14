@@ -23,7 +23,7 @@ public class Fournisseur implements Serializable{
 	private String photo;
 	private String adresse;
 
-	@OneToMany(mappedBy="idCmdFournisseur")
+	@OneToMany(mappedBy="fournisseur")
 	private List<CommandeFournisseur> commandeFournisseurs;
 
 	public Fournisseur() {

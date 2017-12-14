@@ -41,13 +41,13 @@ public class GeneriqueDaoImpl<E> implements IGeneriqueDao<E> {
 
 	@Override
 	public List<E> findAll() {
-		Query query = em.createQuery("SELECT t FROM" + type.getSimpleName()+ "t");
+		Query query = em.createQuery("SELECT t FROM " + type.getSimpleName()+ " t ");
 		return query.getResultList();
 	}
 
 	@Override
 	public List<E> findAll(String sortField, String sort) {
-		Query query = em.createQuery("SELECT t FROM" + type.getSimpleName()+ "t OrderBy " + "sortField" + " " + "sort");
+		Query query = em.createQuery("SELECT t FROM " + type.getSimpleName()+ " t OrderBy " + " sortField " + " " + " sort ");
 		return query.getResultList();
 	}
 
@@ -65,7 +65,7 @@ public class GeneriqueDaoImpl<E> implements IGeneriqueDao<E> {
 
 	@Override
 	public E findOne(String paramName, Object paramValue) {
-		Query query = em.createQuery("SELECT t FROM" + type.getSimpleName()+ "t WHERE "+paramName+ " = :x");
+		Query query = em.createQuery("SELECT t FROM " + type.getSimpleName()+ " t WHERE "+paramName+ " = :x ");
 		query.setParameter(paramName, paramValue);
 		return query.getResultList().size() > 0 ? (E) query.getResultList().get(0) : null;
 	}
@@ -78,7 +78,7 @@ public class GeneriqueDaoImpl<E> implements IGeneriqueDao<E> {
 		String queryString = "select e from " + type.getSimpleName() + " e where ";
 		int len = paramNames.length;
 		for (int i = 0; i < len; i++) {
-			queryString += " e." + paramNames[i] + "= :x" + i;
+			queryString += " e." + paramNames[i] + " = :x " + i;
 			if ((i + 1) < len) {
 				queryString += " and ";
 			}
@@ -92,7 +92,7 @@ public class GeneriqueDaoImpl<E> implements IGeneriqueDao<E> {
 
 	@Override
 	public int findCountBy(String paramName, Object paramValue) {
-		Query query = em.createQuery("SELECT t FROM" + type.getSimpleName()+ "t WHERE "+paramName+ " = :x");
+		Query query = em.createQuery("SELECT t FROM " + type.getSimpleName()+ " t WHERE "+paramName+ " = :x");
 		query.setParameter(paramName, paramValue);
 		return query.getResultList().size() > 0 ? ((Long) query.getSingleResult()).intValue() : 0;
 	}

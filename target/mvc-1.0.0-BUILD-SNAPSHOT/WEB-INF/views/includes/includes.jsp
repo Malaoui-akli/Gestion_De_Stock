@@ -10,6 +10,6 @@
 
 %>
 
-
+<%-- 
 <fmt:setLocale value="${locale}" />
-<fmt:bundle basename="com.stock.mvc.i18n.applicationresources" /> 
+<fmt:bundle basename="com.stock.mvc.i18n.applicationresources" />  --%>
